@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>
+
+   ADMIN VIEW
+
+</title>
+<link href="/styles.css" rel="stylesheet" type="text/css"/>
+<% include ./partialTemplates/navbar %>
+</head>
+<body>
+        <h1    style="text-align:center" class="p-3 mb-2 bg-dark text-white"> YOUR INFO</h1>
+         <table class="table table-dark" >
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th> 
+                  <th>Age</th>
+                  <th>Email</th>
+                  <th> Update UR INFO</th>
+                  </tr>
+                  
+                  
+                <tr >
+                        <form     action="/api/user/update/ <%= user.id %>" method="GET" >
+                    
+                    <th><%= user.name %> </th>
+                    <th><%= user.LastName %> </th> 
+                    <th><%= user.age %> </th>
+                    <th><%= user.email %> </th>
+                    <th><button type="submit" class="btn-primary btn-lg" > UPDATE INFO</button></th>
+                  
+                     
+                </tr>
+                  
+                
+            
+              </table class="table table-dark">
+
+
+
+    
+        
+              
+
+
+</body>
+
+    </html>

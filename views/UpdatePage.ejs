@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>
+        UPDATE INFO
+    </title>
+
+   
+    
+    
+    
+    <link href="/styles.css" rel="stylesheet" type="text/css"/>
+    <% include ./partialTemplates/navbar %>
+</head>
+
+
+<body>
+        <div class="p-3 mb-2 bg-dark text-white" style="height:100%">   
+              
+        
+
+ 
+
+  <h1 style="text-align:center">UPDATE INFO </h1>
+
+
+
+
+
+<div>
+<form action="/api/user/update/<%= id %>?_method=PUT" method="POST" >
+    <br>
+    <h4>  UPDATED First Name :</h4>
+<input class="form-control" type="text" name='name' placeholder="First Name" required/>
+</br>
+<br>
+<h4> UPDATED Last Name :</h4>
+<input class="form-control" type="text" name='LastName' placeholder="Last Name" required/>
+</br>
+<br>
+<h4> UPDATED Email :</h4>
+<input class="form-control" type="text" name='email' placeholder="Email" required/>
+</br>
+
+<br>
+<h4> UPDATED AGE :</h4>
+<input class="form-control" type="text" name='age' placeholder="Age" >
+</br>
+<br>
+<h4> UPDATED Password :</h4>
+<input class="form-control" type="password" name='password' placeholder="password" >
+</br>
+
+
+<button type="submit" class="btn btn-success btn-lg">Submit </button>
+
+</form>
+
+
+</div>
+</div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<html>
+
+<head>
+
+        <link href="/styles.css" rel="stylesheet" type="text/css"/>
+        <% include ./partialTemplates/navbar %>
+    <title>
+
+        LOGIN PAGE
+    </title>
+
+   
+    
+    
+    
+    
+    
+</head>
+
+
+<body>
+        
+              
+        
+
+ 
+
+<div class="container">
+<div class ="row">
+<div class="col-6">
+ <h1 style="text-align:center">Login </h1>
+<div class="jumbotron bg-dark text-white  " style="height:800px"  >
+    
+<h2> ENTER YOUR CREDENTIALS : </h2>
+
+
+<div>
+
+<form action="/api/user/login"  method="post" >
+   
+
+<br>
+<h4> Email :</h4>
+<input class="form-control" type="text" name='email' placeholder="Email" required/>
+</br>
+
+
+<br>
+<h4> Password :</h4>
+<input  class="form-control" type="password" name='password' placeholder="password" required/>
+</br>
+
+<br>
+<button type="submit" class="btn btn-success btn-lg">Submit </button>
+</br>
+</form>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="col-6">
+ <h1 style="text-align:center">REGISTER</h1>
+<div class="jumbotron bg-dark text-white" style="height:800px" >
+    <div class="container">
+<h2> ENTER YOUR CREDENTIALS : </h2>
+
+
+<div>
+
+        <form action="/api/user/signup"  method="post" enctype="application/x-www-form-urlencoded">
+            <br>
+            <h4> First Name :</h4>
+        <input class="form-control" type="text" name='name' placeholder="First Name" required/>
+        </br>
+        <br>
+        <h4> Last Name :</h4>
+        <input class="form-control" type="text" name='LastName' placeholder="Last Name" required/>
+        </br>
+        <br>
+        <h4> Email :</h4>
+        <input class="form-control" type="text" name='email' placeholder="Email" required/>
+        </br>
+        
+        <br>
+        <h4> AGE :</h4>
+        <input class="form-control" type="text" name='age' placeholder="Age" >
+        </br>
+        <br>
+        <h4> Password :</h4>
+        <input  class="form-control" type="password" name='password' placeholder="password" >
+        </br>
+        
+        <br>
+        <button type="submit" class="btn btn-success btn-lg">Submit </button>
+        </br>
+        </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

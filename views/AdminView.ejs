@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+
+   ADMIN VIEW
+
+</title>
+<link href="/styles.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+     <h1    style="text-align:center" class="p-3 mb-2 bg-dark text-white"> USERS</h1>
+         <table class="table table-dark" height="100%" >
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th> 
+                  <th>Age</th>
+                  <th>Email</th>
+                  <th> DELETE USER</th>
+                  <th> UPDATE USER</th>
+                  
+                  </tr>
+                  <% for (var i=0; i< users.length; i++){  %>
+                <tr  >
+                        
+                                
+                            
+                        <form   method="Post"  action="/api/admin/deleteUser/ <%= users[i].id %>?_method=DELETE " >
+                    <th><%= users[i].name %> </th>
+                    <th><%= users[i].LastName %> </th> 
+                    <th><%= users[i].age %> </th>
+                    <th><%= users[i].email %> </th>
+                   <th> <button type="submit" class="btn-danger btn-lg"  >DELETE </button></th>
+                
+                    </form>
+                    <form action="/api/user/update/ <%= users[i].id %>" method="GET">
+                          <th>
+                              <button type="submit" class="btn-primary btn-lg "> UPDATE INFO </button>
+                          </th>
+                      </form>
+                    </tr>
+                <% } %>
+                  
+                  
+                    
+
+                  
+                
+                  
+                
+                
+              </table class="table table-dark">
+
+
+
+    
+        
+              
+
+
+</body>
+
+    </html>
